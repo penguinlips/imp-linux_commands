@@ -1,0 +1,42 @@
+to access locked or restricted folders
+	sudo nautilus
+	
+to kill processes in port 80
+	sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
+
+restart tor service:
+	service tor stop && service tor start
+	
+rm -rf (file name)
+	to remove non-empty derectories and all the files
+	
+SUDO_EDITOR="gedit -w" sudoedit /etc/apt/sources.list
+	to edit sources.list
+	
+sudo apt-get install iptraf -y
+    to monitor realtime internet usage of a particular ip address:
+    ((sudo iptraf) to use it)
+    
+sudo apt-get install nethogs
+    to monitor realtime internet usage of apps:
+    ((sudo nethogs) to use it)
+    
+restore theme in debian
+    rm -rf ~/.config/xfce4/ && sudo reboot
+    
+Adjust screen brightness:
+
+    xrandr -q
+            to detect current state of system's display
+    xrandr --output VGA-1 --brightness 0.7
+            to change brightness
+
+troubleshoot bluetooth:
+	check whether its blocked or not:
+		sudo rfkill list
+	if its blocked:
+		sudo rfkill unblock bluetooth
+to start bluetooth service:
+	sudo service bluetooth start
+            
+
